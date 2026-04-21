@@ -12,18 +12,24 @@ claude code Anthropic 配置:
 ```
 
 ```text
- claude  --dangerously-skip-permissions
+claude  --dangerously-skip-permissions
 ```
 
 ```text
 SSH 
 站点  ：ssh xiehuan@192.168.21.240
-密码 ：!!U54%t3$bqP356EoD25@R&^5#!3#t^8
+密码 ：!!U54%t3$bqP356EoD25@R&^5#!3#t^8      
 ```
 
 ```text
 github-login token
 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
+
+huggface-login token
+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
+
+modelscope-login token
+ms-88f2cc52-fdab-499a-9e27-2f615c43e7a5
 ```
 
 ```text
@@ -43,7 +49,7 @@ adb shell getenforce #验证输出:Permissive
 adb shell chown root:root /dev/apusys
 adb shell chmod 666 /dev/apusys
 # 1.4 验证权限设置
-adb shell ls -l /dev/apusys
+adb shell ls -l /dev/apusys 
 #期望输出:crw-rw-rw-1 root root 10，102... /dev/apusys
 注意:这些权限在设备重启后会丢失，需要重新设置。
 ```

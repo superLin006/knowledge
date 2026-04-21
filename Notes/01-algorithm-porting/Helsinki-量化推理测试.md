@@ -1,0 +1,34 @@
+# Helsinki 量化推理测试（OnnxRuntime int8）
+
+## 1. 上下文
+
+**目标**：把多个 Helsinki 翻译模型导出为 ONNX 格式并量化为 int8，完成 int8 推理，最后跑在 C++ 编译好的推理程序上，由 OnnxRuntime 驱动，完成 Android 设备上的推理测试。
+
+**历史与计划**：
+
+1. 从 ModelScope 下载对应模型权重，放到 `models/` 目录（如 `models/opus-mt-en-zh`）
+   - 示例：https://www.modelscope.cn/models/Helsinki-NLP/opus-mt-en-zh
+   - 注意：每个语言对的下载路径规则可能不同
+2. 编写 Python 导出及推理代码，导出 ONNX 格式模型并量化为 int8，完成量化模型推理测试（**已完成**）
+   - 导出脚本：`/helsinki-onnx/python/export_int8_model.py`
+   - 推理脚本：`/helsinki-onnx/python/inference_int8_model.py`
+3. 编译 Helsinki C++ 推理代码，生成可执行文件，把量化后的 int8 模型推送到 Android 设备完成推理测试（**待完成**）
+
+**目前的环境**：conda 环境 `helsinki`，python=3.8（需创建）
+
+| 资源 | 路径 |
+|------|------|
+| NDK | `/home/xh/Android/Ndk/android-ndk-r25c` |
+| SDK | `/home/xh/Android/Sdk` |
+| OnnxRuntime | `/home/xh/Android/OnnxRuntime/onnxruntime-android-1.17.1` |
+
+---
+
+## 2. 当前意图/任务
+
+所有工作已完成，当前目标：
+
+1. 切换到 conda `helsinki` 环境，安装必要依赖，按顺序完成计划中未完成的（1）（2）（3），确保整个流程没有问题
+2. 继续完成新的语言对测试：中→日、韩；日→英、韩、中；韩→日、英、中 的完整流程
+
+> 当前已完成：`opus-mt-tc-big-en-ko` 模型的完整流程（Python 输出和 C++ 输出已验证一致）
