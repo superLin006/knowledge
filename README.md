@@ -15,6 +15,7 @@ Notes/
 ├── 03-workflow-reference/    # 工作流参考
 ├── 04-dev-tools/             # 开发工具配置
 ├── 05-logs/                  # 测试日志
+├── 06-interview/             # 面试准备
 ├── picture/                  # 图片资源
 ├── Question Notes.md         # 问题与学习笔记
 └── 语音算法技术.md            # 语音算法技术概览
@@ -34,6 +35,7 @@ Notes/
 | `RK-NPU 算法移植.md` | RK3576 平台移植笔记（EDSR、RCAN、SwinIR、Real-ESRGAN） |
 | `Helsinki-RK移植.md` | Helsinki 翻译模型移植到 RK3576 的详细流程 |
 | `Helsinki-量化推理测试.md` | Helsinki ONNX int8 量化推理测试流程 |
+| `Zipformer微调技术笔记.md` | Zipformer 全参数微调、LoRA 微调、继续训练全流程技术笔记 |
 | `PORTING_NOTES.md` | 移植通用注意事项 |
 
 ### 02-environment-setup — 环境搭建
@@ -75,6 +77,15 @@ Claude Code 及开发环境的配置文件。
 |------|------|
 | `测试日志.md` | Whisper RKNN 流式识别、APK 集成测试、SenseVoice MTK 调试记录 |
 | `trash.md` | 临时记录和草稿 |
+
+### 06-interview — 面试准备
+
+面试指南与题库，针对语音算法工程师岗位。
+
+| 文件 | 内容 |
+|------|------|
+| `面试指南.md` | 聆思科技 AI 算法工程师岗位专属面试指南（公司分析、自我介绍模板、各环节准备策略） |
+| `面试题库及答案.md` | 语音算法核心面试题库及标准答案（MFCC/Fbank、VAD、KWS、ASR、端侧落地等） |
 
 ---
 
