@@ -1,0 +1,10 @@
+{
+  "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "/bin/bash /home/xh/.claude/statusline-command.sh"
+  },
+  "alwaysThinkingEnabled": false,
+  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "medium"
+}
