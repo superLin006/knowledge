@@ -1,8 +1,10 @@
 # Knowledge Base
 
-团队共享知识库，用于记录 AI 算法移植、嵌入式 Android 开发过程中遇到的问题、解决方案和最佳实践。
+个人工作学习共享知识库，用于记录 
+① 语音（ASR/TTS/VAD/KWS）相关算法 、LLM（Qwen系列,Gamma系列等）以及多模态端到端语音LLM（FunAudioLLM，LiquidAI，UltraVox等）相关知识
+② 以上AI算法端侧移植、模型量化压缩、推理加速、性能优化、以及工程化等过程遇到的问题、解决方案、以及最佳实践
+③ Vibe coding 工作范式以及提效工作流Agent的搭建
 
-每位成员在根目录下维护自己的目录，互不干扰。
 
 ---
 
@@ -10,14 +12,14 @@
 
 ```
 knowledge/
-├── XH/                       # 谢欢的笔记目录
+├── XH/                       # XH的笔记目录
 │   └── Notes/
 │       ├── 00-picture/           # 图片资源
 │       ├── 01-algorithm-porting/ # 算法移植笔记
 │       ├── 02-environment-setup/ # 环境搭建
 │       ├── 03-workflow-reference/# 工作流参考
 │       ├── 04-dev-tools/         # 开发工具配置
-│       ├── 05-logs/              # 测试日志与问题记录
+│       ├── 05-logs/              # 工作日志与问题记录
 │       └── 06-interview/         # 面试准备
 └── README.md
 ```
@@ -32,7 +34,7 @@ knowledge/
 
 ### 01-algorithm-porting — 算法移植
 
-记录将各类 AI 模型移植到 NPU 的完整流程，包括转换链、环境配置、注意事项。
+记录将各类 AI 模型移植到 NPU 的完整流程，包括转换链、环境配置、注意事项(遵循 Vibe Coding 规范)。
 
 | 文件 | 内容 |
 |------|------|
