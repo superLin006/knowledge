@@ -1,9 +1,12 @@
 # Knowledge Base
 
 个人工作学习共享知识库，用于记录 
-① 语音（ASR/TTS/VAD/KWS）相关算法 、LLM（Qwen系列,Gamma系列等）以及多模态端到端语音LLM（FunAudioLLM，LiquidAI，UltraVox等）相关知识
-② 以上AI算法端侧移植、模型量化压缩、推理加速、性能优化、以及工程化等过程遇到的问题、解决方案、以及最佳实践
-③ Vibe coding 工作范式以及提效工作流Agent的搭建
+
+**① 语音（ASR/TTS/VAD/KWS）相关算法 、LLM（Qwen系列,Gamma系列等）以及多模态端到端语音LLM（FunAudioLLM，LiquidAI，UltraVox等）相关知识**
+
+**② 以上AI算法端侧移植、模型量化压缩、推理加速、性能优化、以及工程化等过程遇到的问题、解决方案、以及最佳实践**
+
+**③ Vibe coding 工作范式实践以及提效工作流Agent的搭建**
 
 
 ---
@@ -13,6 +16,7 @@
 ```
 knowledge/
 ├── XH/                       # XH的笔记目录
+│   ├── README.md
 │   └── Notes/
 │       ├── 00-picture/           # 图片资源
 │       ├── 01-algorithm-porting/ # 算法移植笔记
@@ -21,7 +25,7 @@ knowledge/
 │       ├── 04-dev-tools/         # 开发工具配置
 │       ├── 05-logs/              # 工作日志与问题记录
 │       └── 06-interview/         # 面试准备
-└── README.md
+└── （其他成员目录）
 ```
 
 ---
@@ -38,6 +42,7 @@ knowledge/
 
 | 文件 | 内容 |
 |------|------|
+| `00-Vibe-Coding Prompts模板.md` | Vibe Coding 提示词模板集合 |
 | `MTK-NPU 算法移植.md` | MTK MT8371 平台移植笔记（SenseVoice、Helsinki、Whisper、EDSR/RCAN 等） |
 | `RK-NPU 算法移植.md` | RK3576 平台移植笔记（EDSR、RCAN、SwinIR、Real-ESRGAN） |
 | `模型量化推理测试.md` | 模型量化推理测试流程与记录 |
