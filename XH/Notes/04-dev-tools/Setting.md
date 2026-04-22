@@ -16,7 +16,7 @@ claude  --dangerously-skip-permissions
 ```
 
 ```text
-SSH 
+lg-ai SSH 
 站点  ：ssh xiehuan@192.168.21.240
 密码 ：!!U54%t3$bqP356EoD25@R&^5#!3#t^8      
 ```
@@ -33,12 +33,6 @@ ms-88f2cc52-fdab-499a-9e27-2f615c43e7a5
 ```
 
 ```text
-切换串口信号到 tpye B
-su
-mwt 0x7000 9
-```
-
-```text
 修复MTK设备端 NPU 权限
 # 1.1 获取 root 杈限
 adb root
@@ -52,6 +46,12 @@ adb shell chmod 666 /dev/apusys
 adb shell ls -l /dev/apusys 
 #期望输出:crw-rw-rw-1 root root 10，102... /dev/apusys
 注意:这些权限在设备重启后会丢失，需要重新设置。
+```
+
+```text
+切换串口信号到 tpye B
+su
+mwt 0x7000 9
 ```
 
 ```text

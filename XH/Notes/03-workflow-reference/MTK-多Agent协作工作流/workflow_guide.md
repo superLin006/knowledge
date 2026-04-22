@@ -8,7 +8,7 @@
 
 ### 核心原理
 
-**是的，主 Agent 会主动注入相关信息到 Subagent**
+**主 Agent 会主动注入相关信息到 Subagent**
 
 主 Agent 不会简单地传递你的请求，而是：
 
@@ -120,7 +120,7 @@ Edit(修改内容)
 5. Task(subagent_type="general-purpose", prompt=完整指令)
 ```
 
-#### 场景3：你说"移植YOLO-v8"
+#### 场景3：你说"移植YOLO-v8,并提供完整的移植相关的Prompts"
 
 ```text
 主Agent的判断：
@@ -144,21 +144,21 @@ Edit(修改内容)
 
 ```text
 ┌─────────────────────────────────────────────────────┐
-│                      用户 (You)                      │
+│                      用户 (You)                     │
 │  提供算法移植需求（模型、平台、环境、参考项目等）       │
 └────────────────────┬────────────────────────────────┘
                      │ 提供详细 prompt
                      ▼
 ┌─────────────────────────────────────────────────────┐
-│                   主Agent (我)                       │
-│  职责：解析需求 → 选择模板 → 组合信息 → 调用Subagent  │
+│                   主Agent (我)                      │
+│  职责：解析需求 → 选择模板 → 组合信息 → 调用Subagent   │
 └────────────────────┬────────────────────────────────┘
                      │
          ┌───────────┼───────────┐
          │           │           │
          ▼           ▼           ▼
     ┌─────────┐ ┌─────────┐ ┌─────────┐
-    │ 读取5个  │ │ 组合用户 │ │ 调用Task │
+    │ 读取4个  │ │ 组合用户 │ │ 调用Task │
     │ subagent│ │ 信息     │ │ 工具    │
     │ 模板    │ │          │ │         │
     └─────────┘ └─────────┘ └─────────┘
@@ -172,7 +172,7 @@ Edit(修改内容)
 
 ### 详细流程示例
 
-#### 用户请求："移植Whisper到MTK NPU"
+#### 用户请求："移植Whisper到MTK NPU，并附带详细Prompts"
 
 ```python
 # ===== 主Agent的内部处理 =====
@@ -260,21 +260,19 @@ Task(
 ├── USAGE_EXAMPLE.md       # 使用示例
 ├── WORKFLOW_GUIDE.md      # 本文件：工作原理说明
 ├── project-initializer.md    # 项目初始化模板 ✅
-├── operator-analyst.md       # 算子分析模板 ✅
+├── operator-analyst.md       # 算子分析模板   ✅
 ├── python-converter.md       # Python转换模板 ✅
-├── cpp-implementer.md        # C++实现模板 ✅
-└── android-deployer.md       # Android部署模板 ⏳
+├── cpp-implementer.md        # C++实现部署模板 ✅
 ```
 
 ### 模板选择逻辑
 
 | 你的请求 | 主Agent选择 | 读取的模板 |
 | --- | --- | --- |
-| "移植YOLO-v8" | project-initializer | project-initializer.md |
+| "移植YOLO-v8..." | project-initializer | project-initializer.md |
 | "分析算子支持情况" | operator-analyst | operator-analyst.md |
 | "继续Python转换" | python-converter | python-converter.md |
 | "继续C++实现" | cpp-implementer | cpp-implementer.md |
-| "部署到Android" | android-deployer | android-deployer.md |
 
 ---
 
@@ -344,7 +342,7 @@ Task(
 ### 完整流程
 
 ```text
-你 → "移植Whisper到MTK NPU"
+你 → "移植Whisper到MTK NPU..."
      ↓
 【阶段1：项目初始化】
 主Agent：
@@ -499,8 +497,8 @@ full_prompt = f"""
 
 ---
 
-**文档版本**: v1.0
+**文档版本**: v2.0
 **创建日期**: 2026-02-05
-**最后更新**: 2026-02-05
+**最后更新**: 2026-04-22
 **维护者**: MTK NPU移植团队
 ```

@@ -133,4 +133,4 @@ exit
 
 ## Zipformer 多卡训练遇到的问题（8卡 DDP 训练 NCCL 报错）
 
-![mtk-wsl-network-debug.png](picture/mtk-wsl-network-debug.png)
+![mtk-wsl-network-debug.png](../00-picture/mtk-wsl-network-debug.png)

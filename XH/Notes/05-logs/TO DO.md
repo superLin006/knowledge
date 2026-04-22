@@ -22,11 +22,11 @@
 
 **创建的 Skills：**
 
-![mtk-skills-table.png](../picture/mtk-skills-table.png)
+![mtk-skills-table.png](../00-picture/mtk-skills-table.png)
 
 **创建的文件清单（Skills 相关）：**
 
-![mtk-skills-directory-structure.png](../picture/mtk-skills-directory-structure.png)
+![mtk-skills-directory-structure.png](../00-picture/mtk-skills-directory-structure.png)
 
 **知识库和配置文件：**
 

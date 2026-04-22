@@ -153,9 +153,9 @@ conda 环境已创建，工作目录 `/home/xh/projects/MTK/helsinki`，建立�
 
 ### 4. 辅助视觉
 
-![Helsinki 部署 ADB 命令](../picture/helsinki-deploy-adb-commands.png)
+![Helsinki 部署 ADB 命令](../00-picture/helsinki-deploy-adb-commands.png)
 
-![MTK Sherpa JNI 库文件列表](../picture/mtk-sherpa-jni-libs-list.png)
+![MTK Sherpa JNI 库文件列表](../00-picture/mtk-sherpa-jni-libs-list.png)
 
 ---
 
@@ -220,7 +220,7 @@ https://www.modelscope.cn/models/facebook/m2m100_418M/files
 
 转换脚本：`step1_pt_to_torchscript.py`、`step2_torchscript_to_tflite.py`、`step3_tflite_to_dla.py`
 
-测试脚本：`test_pytorch.py`、`test_pt.py`、`test_tflite.py`、`test_compare.py`
+测试脚本：`test_pytorch.py`、`test_pt.py`、`test_tflite.py`
 
 每个转换节点完成后单独测试，正确后再进行下一节点（dla 除外）；参考 Helsinki 目录格式以及 rk 的 edsr/rcan 项目 Python 代码
 
@@ -278,7 +278,7 @@ https://www.modelscope.cn/models/facebook/m2m100_418M/files
 
 可参考 rk realesrgan 项目（含原始模型架构定义、权重、测试图片及推理代码）
 
-测试脚本：`test_pytorch.py`（可直接复制 rk 项目的）、`test_pt.py`、`test_tflite.py`、`test_compare.py`
+测试脚本：`test_pytorch.py`（可直接复制 rk 项目的）、`test_pt.py`、`test_tflite.py`
 
 参考 edsr 目录格式重组，工作主要在 Python 端
 
@@ -336,7 +336,7 @@ https://www.modelscope.cn/models/facebook/m2m100_418M/files
 转换脚本：`step1_pt_to_torchscript.py`、`step2_torchscript_to_tflite.py`、`step3_tflite_to_dla.py`
 
 - clone openai/whisper 官方仓库，下载 base 模型
-- 测试脚本：`test_pytorch.py`（参考 whisper 官方推理脚本）、`test_pt.py`、`test_tflite.py`、`test_compare.py`
+- 测试脚本：`test_pytorch.py`（参考 whisper 官方推理脚本）、`test_pt.py`、`test_tflite.py`
 - 参考 edsr/mtk 目录格式重组
 
 **第二步（C++ 端）**：将 Python 推理代码转换为 C++
@@ -446,7 +446,7 @@ https://www.modelscope.cn/models/facebook/m2m100_418M/files
 转换脚本：`step1_pt_to_torchscript.py`、`step2_torchscript_to_tflite.py`、`step3_tflite_to_dla.py`
 
 - clone zipformer 中英双语官方仓库，下载对应模型
-- 测试脚本：`test_pytorch.py`（参考 Whisper 官方推理脚本）、`test_pt.py`、`test_tflite.py`
+- 测试脚本：`test_pytorch.py`（参考 zipformer 官方推理脚本）、`test_pt.py`、`test_tflite.py`
 - 最终对比 `.pt` 和 `.tflite` 格式输出，验证正确性后再进行下一节点（dla 除外）
 
 **第二步（C++ 端）**：将 Python 推理代码转换为 C++
