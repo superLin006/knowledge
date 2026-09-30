@@ -18,18 +18,18 @@ claude  --dangerously-skip-permissions
 ```text
 lg-ai SSH 
 站点  ：ssh xiehuan@192.168.21.240
-密码 ：!!U54%t3$bqP356EoD25@R&^5#!3#t^8      
+[凭据已移除：请使用本地凭据管理器或环境变量，不要提交到 Git。]
 ```
 
 ```text
 github-login token
-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
+[凭据已移除：请使用本地凭据管理器或环境变量，不要提交到 Git。]
 
 huggface-login token
-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
+[凭据已移除：请使用本地凭据管理器或环境变量，不要提交到 Git。]
 
 modelscope-login token
-ms-88f2cc52-fdab-499a-9e27-2f615c43e7a5
+[凭据已移除：请使用本地凭据管理器或环境变量，不要提交到 Git。]
 ```
 
 ```text
